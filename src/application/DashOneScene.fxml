@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="590.0" prefWidth="962.0" styleClass="border-pane8" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.DashOneController">
+   <children>
+      <TabPane layoutX="-1.0" prefHeight="590.0" prefWidth="966.0">
+         <tabs>
+            <!-- Customers Tab -->
+            <Tab text="Customers">
+               <AnchorPane prefHeight="536.0" prefWidth="1028.0" styleClass="border-pane8">
+                  <children>
+                     <VBox layoutX="10.0" layoutY="30.0" spacing="15.0" />
+                     
+                     <VBox layoutX="140.0" layoutY="30.0" spacing="10.0" />
+
+                     <TableView fx:id="customerTable" layoutX="268.0" layoutY="31.0" onMouseClicked="#handleCustomerRowSelection" prefHeight="229.0" prefWidth="369.0" styleClass="border-pane6">
+                        <columns>
+                           <TableColumn fx:id="customerIDColumn" prefWidth="75.0" text="Customer ID" />
+                           <TableColumn fx:id="customerNameColumn" prefWidth="100.0" text="Customer Name" />
+                           <TableColumn fx:id="emailColumn" prefWidth="100.0" text="Email" />
+                           <TableColumn fx:id="ninColumn" prefWidth="75.0" text="NIN" />
+                        </columns>
+                     </TableView>
+
+                     <TableView fx:id="phoneTable" layoutX="268.0" layoutY="298.0" onMouseClicked="#handlePhoneRowSelection" prefHeight="204.0" prefWidth="375.0" styleClass="border-pane6">
+                        <columns>
+                           <TableColumn fx:id="phoneCustomerIDColumn" prefWidth="75.0" text="Customer ID" />
+                           <TableColumn fx:id="phoneColumn" prefWidth="278.0" text="Phone" />
+                        </columns>
+                     </TableView>
+
+                     <Button layoutX="17.0" layoutY="396.0" mnemonicParsing="false" onAction="#addCustomer" prefHeight="36.0" prefWidth="155.0" text="Add New Customer" />
+                     <Button id="serch_nin_butn" layoutX="17.0" layoutY="351.0" mnemonicParsing="false" onAction="#searchForNIN" prefHeight="36.0" prefWidth="151.0" text="Search for NIN" />
+                 
+                     <Button layoutX="15.0" layoutY="443.0" mnemonicParsing="false" onAction="#addPhone" prefHeight="36.0" prefWidth="157.0" text="Add Phone" />
+                     
+                     <Label layoutX="268.0" layoutY="14.0" text="Customer Table">
+                        <font>
+                           <Font size="20.0" />
+                        </font>
+                     </Label>
+                     <Label layoutX="268.0" layoutY="282.0" text="Phone Table">
+                        <font>
+                           <Font size="20.0" />
+                        </font>
+                     </Label>
+                     <Label layoutX="14.0" layoutY="159.0" text="Phone">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Label>
+                     <Label layoutX="22.0" layoutY="282.0" text="NIN">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Label>
+                     <Label layoutX="18.0" layoutY="221.0" text="Email">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Label>
+                     <Label layoutX="17.0" layoutY="102.0" text="Name">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Label>
+                     <Label layoutX="12.0" layoutY="37.0" text="Customer ID">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Label>
+                     <TextField fx:id="customerIDField" layoutX="95.0" layoutY="31.0" prefHeight="32.0" prefWidth="155.0" promptText="Customer ID" />
+                     <TextField fx:id="customerNameField" layoutX="96.0" layoutY="96.0" prefHeight="32.0" prefWidth="153.0" promptText="Customer Name" />
+                     <TextField fx:id="emailField" layoutX="98.0" layoutY="215.0" prefHeight="32.0" prefWidth="150.0" promptText="Email" />
+                     <TextField fx:id="ninField" layoutX="98.0" layoutY="276.0" prefHeight="32.0" prefWidth="150.0" promptText="NIN" />
+                     <TextField fx:id="phoneField" layoutX="96.0" layoutY="153.0" prefHeight="32.0" prefWidth="154.0" promptText="Phone" />
+                  </children>
+               </AnchorPane>
+            </Tab>
+
+            <!-- Cars Tab -->
+            <Tab text="Cars">
+               <AnchorPane styleClass="border-pane8">
+                  <children>
+                     <VBox layoutX="10.0" layoutY="30.0" spacing="15.0" />
+
+                     <TableView fx:id="carTable" layoutX="14.0" layoutY="61.0" onMouseClicked="#handleCarRowSelection" prefHeight="297.0" prefWidth="450.0" styleClass="border-pane6">
+                        <columns>
+                           <TableColumn fx:id="carIDColumn" prefWidth="75.0" text="Car ID" />
+                           <TableColumn fx:id="carModelColumn" prefWidth="100.0" text="Car Model" />
+                           <TableColumn fx:id="carTypeColumn" prefWidth="100.0" text="Car Type" />
+                           <TableColumn fx:id="carColorColumn" prefWidth="75.0" text="Car Color" />
+                           <TableColumn fx:id="carStatusColumn" prefWidth="75.0" text="Car Status" />
+                        </columns>
+                     </TableView>
+
+               
+                     <Label layoutX="46.0" layoutY="21.0" text="Car Table">
+                        <font>
+                           <Font size="20.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </AnchorPane>
+            </Tab>
+
+            <!-- Services Tab -->
+            <Tab text="Services">
+               <AnchorPane styleClass="border-pane8">
+                  <children>
+                     <VBox layoutX="10.0" layoutY="30.0" spacing="15.0">
+                        <children>
+                           <Label text="Service ID">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                           </Label>
+                        </children>
+                     </VBox>
+                     
+                     <VBox layoutX="140.0" layoutY="30.0" spacing="10.0">
+                        <children>
+                           <TextField fx:id="serviceIDField" prefHeight="32.0" prefWidth="150.0" promptText="Service ID" />
+                           <TextField fx:id="customarIDField" prefHeight="32.0" prefWidth="150.0" promptText="Customer ID" />
+                           <TextField fx:id="carIDField1" prefHeight="32.0" prefWidth="150.0" promptText="Car ID" />
+                           <TextField fx:id="serviceDescriptionField" prefHeight="32.0" prefWidth="150.0" promptText="Service Description" />
+                        </children>
+                     </VBox>
+
+                     <TableView fx:id="serviceTable" layoutX="310.0" layoutY="30.0" onMouseClicked="#handleServiceRowSelection" prefHeight="297.0" prefWidth="450.0" styleClass="border-pane6">
+                        <columns>
+                           <TableColumn fx:id="serviceIDColumn" prefWidth="75.0" text="Service ID" />
+                           <TableColumn fx:id="serviceCustomerIDColumn" prefWidth="100.0" text="Customer ID" />
+                           <TableColumn fx:id="serviceCarIDColumn" prefWidth="100.0" text="Car ID" />
+                           <TableColumn fx:id="serviceDescriptionColumn" prefWidth="150.0" text="Service Description" />
+                        </columns>
+                     </TableView>
+
+                     <Button layoutX="14.0" layoutY="240.0" mnemonicParsing="false" onAction="#addService" prefHeight="33.0" prefWidth="125.0" text="Add New Service" />
+                     
+                     <Label layoutX="310.0" layoutY="5.0" text="Service Table">
+                        <font>
+                           <Font size="20.0" />
+                        </font>
+                     </Label>
+                     <Label layoutX="14.0" layoutY="159.0" text="Service Description">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Label>
+                     <Label layoutX="14.0" layoutY="116.0" text="Car ID">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Label>
+                     <Label layoutX="14.0" layoutY="74.0" text="Customer ID">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </AnchorPane>
+            </Tab>
+
+            <!-- Sales Tab -->
+            <Tab text="Sales">
+               <AnchorPane styleClass="border-pane8">
+                  <children>
+                     <VBox layoutX="10.0" layoutY="30.0" spacing="15.0">
+                        <children>
+                           <Label text="Sale ID">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                           </Label>
+                        </children>
+                     </VBox>
+
+                     <VBox layoutX="140.0" layoutY="30.0" spacing="10.0">
+                        <children>
+                           <TextField fx:id="saleIDField" prefHeight="32.0" prefWidth="150.0" promptText="Sale ID" />
+                           <TextField fx:id="saleDescriptionField" prefHeight="32.0" prefWidth="150.0" promptText="Sale Description" />
+                           <TextField fx:id="saleCustomerIDField" prefHeight="32.0" prefWidth="150.0" promptText="Customer ID" />
+                           <TextField fx:id="saleCarIDField" prefHeight="32.0" prefWidth="150.0" promptText="Car ID" />
+                           <TextField fx:id="saleEmployeeIDField" prefHeight="32.0" prefWidth="150.0" promptText="Employee ID" />
+                        </children>
+                     </VBox>
+
+                     <TableView fx:id="salesTable" layoutX="310.0" layoutY="30.0" onMouseClicked="#handleSaleRowSelection" prefHeight="297.0" prefWidth="450.0" styleClass="border-pane6">
+                        <columns>
+                           <TableColumn fx:id="saleIDColumn" prefWidth="75.0" text="Sale ID" />
+                           <TableColumn fx:id="saleDescriptionColumn" prefWidth="100.0" text="Sale Description" />
+                           <TableColumn fx:id="saleCustomerIDColumn" prefWidth="100.0" text="Customer ID" />
+                           <TableColumn fx:id="saleCarIDColumn" prefWidth="100.0" text="Car ID" />
+                           <TableColumn fx:id="saleEmployeeIDColumn" prefWidth="100.0" text="Employee ID" />
+                        </columns>
+                     </TableView>
+
+                     <Button layoutX="14.0" layoutY="262.0" mnemonicParsing="false" onAction="#addSale" prefHeight="35.0" prefWidth="125.0" text="Add New Sale" />
+                     
+                     <Label layoutX="310.0" layoutY="5.0" text="Sale Table">
+                        <font>
+                           <Font size="20.0" />
+                        </font>
+                     </Label>
+                     <Label layoutX="10.0" layoutY="69.0" text="Sale Description">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Label>
+                     <Label layoutX="10.0" layoutY="113.0" text="Customer ID">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Label>
+                     <Label layoutX="10.0" layoutY="161.0" text="Car ID">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Label>
+                     <Label layoutX="10.0" layoutY="202.0" text="Employee ID">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </AnchorPane>
+            </Tab>
+
+            <!-- Cashs Tab -->
+            <Tab text="Cashs">
+               <AnchorPane styleClass="border-pane8">
+                  <children>
+                     <VBox layoutX="10.0" layoutY="30.0" spacing="15.0">
+                        <children>
+                           <Label text="Sale ID">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                           </Label>
+                        </children>
+                     </VBox>
+
+                     <VBox layoutX="140.0" layoutY="30.0" spacing="10.0">
+                        <children>
+                           <TextField fx:id="cashSaleIDField" prefHeight="32.0" prefWidth="150.0" promptText="Sale ID" />
+                           <TextField fx:id="processNumberField" prefHeight="32.0" prefWidth="150.0" promptText="Process Number" />
+                           <TextField fx:id="bankCashField" prefHeight="32.0" prefWidth="150.0" promptText="Bank Cash" />
+                           <TextField fx:id="directCashField" prefHeight="32.0" prefWidth="150.0" promptText="Direct Cash" />
+                           <TextField fx:id="discountsField" prefHeight="32.0" prefWidth="150.0" promptText="Discounts" />
+                        </children>
+                     </VBox>
+
+                     <TableView fx:id="cashTable" layoutX="310.0" layoutY="30.0" onMouseClicked="#handleCashRowSelection" prefHeight="297.0" prefWidth="450.0" styleClass="border-pane6">
+                        <columns>
+                           <TableColumn fx:id="cashSaleIDColumn" prefWidth="75.0" text="Sale ID" />
+                           <TableColumn fx:id="processNumberColumn" prefWidth="100.0" text="Process Number" />
+                           <TableColumn fx:id="bankCashColumn" prefWidth="100.0" text="Bank Cash" />
+                           <TableColumn fx:id="directCashColumn" prefWidth="100.0" text="Direct Cash" />
+                           <TableColumn fx:id="discountsColumn" prefWidth="75.0" text="Discounts" />
+                        </columns>
+                     </TableView>
+
+                     <Button layoutX="14.0" layoutY="275.0" mnemonicParsing="false" onAction="#addCash" prefHeight="31.0" prefWidth="115.0" text="Add New" />
+                     
+                     <Label layoutX="310.0" layoutY="5.0" text="Cash Table">
+                        <font>
+                           <Font size="20.0" />
+                        </font>
+                     </Label>
+                     <Label layoutX="10.0" layoutY="74.0" text="Process Number">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Label>
+                     <Label layoutX="10.0" layoutY="113.0" text="Bank Cash">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Label>
+                     <Label layoutX="10.0" layoutY="162.0" text="Direct Cash">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Label>
+                     <Label layoutX="10.0" layoutY="204.0" text="Discounts">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </AnchorPane>
+            </Tab>
+
+            <!-- Installment Payments Tab -->
+            <Tab text="Installment Payments">
+               <AnchorPane styleClass="border-pane8">
+                  <children>
+                     <VBox layoutX="10.0" layoutY="30.0" spacing="15.0">
+                        <children>
+                           <Label text="Sale ID">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                           </Label>
+                        </children>
+                     </VBox>
+
+                     <VBox layoutX="140.0" layoutY="30.0" spacing="10.0">
+                        <children>
+                           <TextField fx:id="installmentSaleIDField" prefHeight="32.0" prefWidth="150.0" promptText="Sale ID" />
+                           <TextField fx:id="installmentProcessNumberField" prefHeight="32.0" prefWidth="150.0" promptText="Process Number" />
+                           <TextField fx:id="totalCostField" prefHeight="32.0" prefWidth="150.0" promptText="Total Cost" />
+                           <TextField fx:id="firstPaymentField" prefHeight="32.0" prefWidth="150.0" promptText="First Payment" />
+                           <TextField fx:id="monthlyInstallmentField" prefHeight="32.0" prefWidth="150.0" promptText="Monthly Installment" />
+                           <TextField fx:id="numberOfMonthsField" prefHeight="32.0" prefWidth="150.0" promptText="Number of Months" />
+                        </children>
+                     </VBox>
+
+                     <TableView fx:id="installmentPaymentsTable" layoutX="310.0" layoutY="30.0" onMouseClicked="#handleInstallmentPaymentRowSelection" prefHeight="297.0" prefWidth="450.0" styleClass="border-pane6">
+                        <columns>
+                           <TableColumn fx:id="installmentSaleIDColumn" prefWidth="75.0" text="Sale ID" />
+                           <TableColumn fx:id="installmentProcessNumberColumn" prefWidth="100.0" text="Process Number" />
+                           <TableColumn fx:id="totalCostColumn" prefWidth="100.0" text="Total Cost" />
+                           <TableColumn fx:id="firstPaymentColumn" prefWidth="100.0" text="First Payment" />
+                           <TableColumn fx:id="monthlyInstallmentColumn" prefWidth="100.0" text="Monthly Installment" />
+                           <TableColumn fx:id="numberOfMonthsColumn" prefWidth="100.0" text="Number of Months" />
+                        </columns>
+                     </TableView>
+
+                     <Button layoutX="22.0" layoutY="301.0" mnemonicParsing="false" onAction="#addInstallmentPayment" prefHeight="31.0" prefWidth="106.0" text="Add New" />
+                     
+                     <Label layoutX="310.0" layoutY="5.0" text="Installment Payments Table">
+                        <font>
+                           <Font size="20.0" />
+                        </font>
+                     </Label>
+                     <Label layoutX="10.0" layoutY="72.0" text="Process Number">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Label>
+                     <Label layoutX="10.0" layoutY="119.0" text="Total Cost">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Label>
+                     <Label layoutX="10.0" layoutY="162.0" text="First Payment">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Label>
+                     <Label layoutX="10.0" layoutY="206.0" text="Monthly Installment">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Label>
+                     <Label layoutX="10.0" layoutY="245.0" text="Number of Months">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </AnchorPane>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

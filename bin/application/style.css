@@ -1,0 +1,233 @@
+/* General Styling */
+.root {
+    -fx-font-family: "Arial";
+    -fx-background-color: #f4f4f4;
+}
+
+.tab-pane {
+    -fx-background-color: #d3d3d3;
+    -fx-padding: 5;
+}
+
+.tab {
+    -fx-background-color: #c0c0c0;
+    -fx-text-fill: #ffffff;
+    -fx-padding: 10 20;
+    -fx-font-weight: bold;
+}
+
+.tab:selected {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+    -fx-border-color: #4682b4;
+    -fx-border-width: 0 0 2px 0;
+}
+
+.vbox {
+    -fx-padding: 15;
+    -fx-background-color: #ffffff;
+    -fx-border-color: #dcdcdc;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);
+}
+
+.box {
+    -fx-padding: 10;
+    -fx-background-color: #e8e8e8;
+    -fx-border-color: #b0c4de;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 0);
+}
+
+.label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+    -fx-font-weight: bold;
+}
+
+.header-label {
+    -fx-font-size: 16px;
+    -fx-text-fill: #333333;
+    -fx-font-weight: bold;
+}
+
+.text-field {
+    -fx-font-size: 14px;
+    -fx-padding: 5;
+    -fx-border-color: #b0c4de;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-background-color: #f9f9f9;
+}
+
+.date-picker {
+    -fx-font-size: 14px;
+    -fx-padding: 5;
+    -fx-border-color: #b0c4de;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-background-color: #f9f9f9;
+}
+
+.table-view {
+    -fx-padding: 10;
+    -fx-border-color: #dcdcdc;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-background-color: #ffffff;
+    -fx-alternate-row-fill-visible: true;
+    -fx-selection-bar: #4682b4;
+    -fx-selection-bar-non-focused: #b0e0e6;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);
+}
+
+.table-column {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+    -fx-background-color: #f9f9f9;
+    -fx-border-color: #dcdcdc;
+    -fx-border-width: 1;
+    -fx-padding: 5;
+}
+
+.button {
+    -fx-font-size: 14px;
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #4682b4;
+    -fx-padding: 10 20;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 0);
+}
+
+.button:hover {
+    -fx-background-color: #5a9bd4;
+}
+
+.button:pressed {
+    -fx-background-color: #357ab7;
+}
+
+.dashboard-box {
+    -fx-padding: 20;
+    -fx-background-color: #f0f0f0;
+}
+
+.header-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.stat-box {
+    -fx-background-color: #1e90ff; /* Blue background */
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-padding: 20;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 0);
+    -fx-max-width: 150px;
+    -fx-max-height: 150px;
+    -fx-min-width: 150px;
+    -fx-min-height: 150px;
+}
+
+.stat-label {
+    -fx-text-fill: white; /* White text */
+    -fx-font-size: 14px;
+}
+
+.stat-value {
+    -fx-text-fill: white; /* White text */
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.table-box {
+    -fx-padding: 20;
+}
+
+.table-view {
+    -fx-background-color: white;
+}
+
+.table-column {
+    -fx-font-size: 14px;
+}
+
+
+
+.border-pane5 {
+    -fx-background-image: url('1642066.jpg');
+    -fx-background-repeat: repeat;
+    -fx-background-position: center center;
+    -fx-background-size: cover;
+}
+
+
+.border-pane6 {
+    -fx-background-image: url('company.jpg');
+    -fx-background-repeat: repeat;
+    -fx-background-position: center center;
+    -fx-background-size: cover;
+}
+
+
+.border-pane7 {
+    -fx-background-image: url('kiaICON.jpg');
+    -fx-background-repeat: repeat;
+    -fx-background-position: center center;
+    -fx-background-size: cover;
+}
+
+.border-pane8 {
+    -fx-background-image: url('company.jpg');
+    -fx-background-repeat: repeat;
+    -fx-background-position: center center;
+    -fx-background-size: cover;
+}
+
+
+.login-pane {
+    -fx-background-color: #f0f0f0;
+}
+
+.login-button {
+    -fx-background-color: #d32f2f;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+}
+
+.login-button:hover {
+    -fx-background-color: #b71c1c;
+}
+
+.login-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #d32f2f;
+}
+
+.text-field {
+    -fx-border-color: #d32f2f;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+}
+
+.password-field {
+    -fx-border-color: #d32f2f;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+}

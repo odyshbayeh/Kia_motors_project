@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+
+<AnchorPane prefHeight="360.0" prefWidth="569.0" styleClass="login-pane" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
+    <children>
+        <AnchorPane layoutX="12.0" layoutY="14.0" prefHeight="346.0" prefWidth="572.0">
+            <children>
+                <ImageView fitHeight="427.0" fitWidth="572.0" layoutX="-8.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@Kia-Motors-logo.jpg" />
+                    </image>
+                </ImageView>
+                <HBox alignment="CENTER" layoutX="365.0" layoutY="24.0" spacing="10.0" />
+                <VBox fx:id="loginForm" alignment="CENTER" layoutX="365.0" layoutY="100.0" prefHeight="167.0" prefWidth="194.0" spacing="10.0" visible="false">
+                    <children>
+                        <Label text="Username">
+                            <textFill>
+                                <LinearGradient endX="1.0" endY="1.0">
+                                    <stops>
+                                        <Stop>
+                                            <color>
+                                                <Color red="1.0" />
+                                            </color>
+                                        </Stop>
+                                        <Stop offset="1.0">
+                                            <color>
+                                                <Color red="1.0" green="1.0" blue="1.0" />
+                                            </color>
+                                        </Stop>
+                                    </stops>
+                                </LinearGradient>
+                            </textFill>
+                        </Label>
+                        <TextField fx:id="usernameField" prefHeight="25.0" prefWidth="373.0" />
+                        <Label text="Password">
+                            <textFill>
+                                <LinearGradient endX="1.0" endY="1.0">
+                                    <stops>
+                                        <Stop>
+                                            <color>
+                                                <Color red="1.0" />
+                                            </color>
+                                        </Stop>
+                                        <Stop offset="1.0">
+                                            <color>
+                                                <Color red="1.0" green="1.0" blue="1.0" />
+                                            </color>
+                                        </Stop>
+                                    </stops>
+                                </LinearGradient>
+                            </textFill>
+                        </Label>
+                        <PasswordField fx:id="passwordField" />
+                        <Button onAction="#handleLogin" prefHeight="39.0" prefWidth="99.0" text="Login" textFill="#da0000" />
+                    </children>
+                </VBox>
+                  <Button layoutX="68.0" layoutY="26.0" onAction="#showManagerLogin" text="Manager" />
+                  <Button layoutX="409.0" layoutY="26.0" onAction="#showSalesmanLogin" text="Salesman" />
+            </children>
+        </AnchorPane>
+    </children>
+    <effect>
+        <DropShadow>
+            <input>
+                <Blend />
+            </input>
+        </DropShadow>
+    </effect>
+</AnchorPane>

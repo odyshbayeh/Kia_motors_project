@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane fx:id="gridPane" alignment="CENTER" hgap="10" styleClass="border-pane5" stylesheets="@style.css" vgap="10" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ManagerLoginController">
+    <children>
+        <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Manager Login" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0" />
+        
+        <Label text="Username:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextField fx:id="usernameField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        
+        <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        
+        <HBox alignment="CENTER_RIGHT" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <children>
+                <Button onAction="#handleLogin" text="Login" />
+            </children>
+        </HBox>
+    </children>
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
